@@ -4,7 +4,7 @@ import { Card } from "react-native-paper";
 
 export const RestaurantInfo = ({ restaurant = {} }) => {
   const {
-    name = "Some Resto",
+    name = "Wok de Pedro",
     icon,
     photos = [
       "https://images.hola.com/imagenes/cocina/recetas/20230116224671/wok-pollo-thai/1-190-736/wok-pollo-age-t.jpg?tx=w_1200",
@@ -17,7 +17,7 @@ export const RestaurantInfo = ({ restaurant = {} }) => {
   return (
     <Card elevation={5} style={StyleSheet.card}>
       <Card.Cover key={name} style={styles.cover} source={{ uri: photos[0] }} />
-      <Text>{name}</Text>
+      <Text style={styles.title}>{name}</Text>
     </Card>
   );
 };
@@ -25,4 +25,5 @@ export const RestaurantInfo = ({ restaurant = {} }) => {
 const styles = StyleSheet.create({
   card: { backgroundColor: "white" },
   cover: { padding: 20, backgroundColor: "white" },
+  title: { padding: 16, color: "grey" },
 });
