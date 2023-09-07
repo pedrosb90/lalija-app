@@ -1,8 +1,10 @@
 import React from "react";
 import { Searchbar } from "react-native-paper";
-
 import { StatusBar, StyleSheet, Text, View, SafeAreaView } from "react-native";
-import { RestaurantInfo } from "../restaurants-info";
+import { RestaurantInfo, RestaurantInfoCard } from "../restaurants-info-card";
+import { styled } from "styled-components/native";
+
+const Title = styled.Text``;
 
 export const RestaurantsScreen = () => (
   <SafeAreaView style={{ flex: 1 }}>
@@ -11,7 +13,7 @@ export const RestaurantsScreen = () => (
       <Searchbar />
     </View>
     <View style={{ flex: 1, padding: 16, backgroundColor: "#ff7e67" }}>
-      <RestaurantInfo />
+      <RestaurantInfoCard />
     </View>
   </SafeAreaView>
 );
